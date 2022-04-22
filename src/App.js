@@ -4,6 +4,7 @@ import MessageCard from "./components/DisplayMessage/MessageCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
 function App() {
   const [messages, setMessages] = useState([{ name: "Johnny", message: "Hi" }]);
 
@@ -12,9 +13,12 @@ function App() {
     setMessages(composeMessage);
   }
   return (
-    <div className="app-container">
-      <Messages addNewMessage={addNewMessage} />
-      <MessageCard postMade={messages} />
+    <div>
+      <NavBar />
+      <div className="app-container">
+        <Messages addNewMessage={addNewMessage} />
+        <MessageCard postMade={messages} />
+      </div>
     </div>
   );
 }
