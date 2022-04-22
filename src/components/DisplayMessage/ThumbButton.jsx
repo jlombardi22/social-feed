@@ -9,14 +9,18 @@ const ThumbButton = props => {
   function handleClickUp() {
     if (buttonUpClass === "inactive") {
       setButtonUpClass("thumbs-up-active");
-    } else {
+    } else if (buttonDownClass === "thumbs-down-active") {
+      setButtonDownClass("inactive");
+    } else if (buttonUpClass === "thumbs-up-active") {
       setButtonUpClass("inactive");
     }
   }
   function handleClickDown() {
     if (buttonDownClass === "inactive") {
       setButtonDownClass("thumbs-down-active");
-    } else {
+    } else if (buttonUpClass === "thumbs-up-active") {
+      setButtonUpClass("inactive");
+    } else if (buttonDownClass === "thumbs-down-active") {
       setButtonDownClass("inactive");
     }
   }

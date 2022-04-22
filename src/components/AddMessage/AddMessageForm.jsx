@@ -18,12 +18,12 @@ const AddMessageForm = props => {
   return (
     <div className="form-card container-fluid">
       <Card>
-        <Form onSubmit={handleSubmit}>
-          <FormGroup row>
-            <Label for="fullName" sm={2}>
-              Name
-            </Label>
-            <Col sm={10}>
+        <Form onSubmit={handleSubmit} className="new-form">
+          <div>
+            <FormGroup row>
+              <Label for="fullName" sm={2}>
+                Name
+              </Label>
               <Input
                 className="add-form-name"
                 name="text"
@@ -31,25 +31,28 @@ const AddMessageForm = props => {
                 value={name}
                 onChange={e => setName(e.target.value)}
               />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label className="post" for="message" sm={2}>
-              Post
-            </Label>
-            <Col className="button-space" sm={10}>
-              <Input
-                className="add-form-message"
-                name="text"
-                placeholder="Message"
-                value={message}
-                onChange={e => setMessage(e.target.value)}
-              />
-              <Button className="add-button" color="primary">
-                Create
-              </Button>
-            </Col>
-          </FormGroup>
+            </FormGroup>
+            <FormGroup row>
+              <div>
+                <Label className="post" for="message" sm={2}>
+                  Post
+                </Label>
+                <div className="button-space" sm={10}>
+                  <Input
+                    className="add-form-message"
+                    name="text"
+                    placeholder="Message"
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
+                    type="textarea"
+                  />
+                  <Button className="add-button" color="primary">
+                    Create
+                  </Button>
+                </div>
+              </div>
+            </FormGroup>
+          </div>
         </Form>
       </Card>
     </div>
