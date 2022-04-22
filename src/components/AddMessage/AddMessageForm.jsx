@@ -19,40 +19,42 @@ const AddMessageForm = props => {
     <div className="form-card container-fluid">
       <Card>
         <Form onSubmit={handleSubmit} className="new-form">
-          <div>
-            <FormGroup row>
+          <FormGroup row>
+            <div className="name-post">
               <Label for="fullName" sm={2}>
                 Name
               </Label>
-              <Input
-                className="add-form-name"
-                name="text"
-                placeholder="Name"
-                value={name}
-                onChange={e => setName(e.target.value)}
-              />
-            </FormGroup>
-            <FormGroup row>
               <div>
-                <Label className="post" for="message" sm={2}>
-                  Post
-                </Label>
-                <div className="button-space" sm={10}>
-                  <Input
-                    className="add-form-message"
-                    name="text"
-                    placeholder="Message"
-                    value={message}
-                    onChange={e => setMessage(e.target.value)}
-                    type="textarea"
-                  />
-                  <Button className="add-button" color="primary">
-                    Create
-                  </Button>
-                </div>
+                <Input
+                  className="add-form-name"
+                  name="text"
+                  placeholder="Name"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                />
               </div>
-            </FormGroup>
-          </div>
+            </div>
+          </FormGroup>
+          <FormGroup row>
+            <div>
+              <Label className="post" for="message" sm={2}>
+                Post
+              </Label>
+              <div className="button-space" sm={10}>
+                <Input
+                  className="add-form-message"
+                  name="text"
+                  placeholder="Message"
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
+                  type="textarea"
+                />
+                <Button className="add-button" color="primary">
+                  Create
+                </Button>
+              </div>
+            </div>
+          </FormGroup>
         </Form>
       </Card>
     </div>

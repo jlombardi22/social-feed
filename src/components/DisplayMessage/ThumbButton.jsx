@@ -7,19 +7,22 @@ const ThumbButton = props => {
   const [buttonUpClass, setButtonUpClass] = useState("inactive");
   const [buttonDownClass, setButtonDownClass] = useState("inactive");
   function handleClickUp() {
-    if (buttonUpClass === "inactive") {
-      setButtonUpClass("thumbs-up-active");
-    } else if (buttonDownClass === "thumbs-down-active") {
+    if (buttonDownClass === "thumbs-down-active") {
       setButtonDownClass("inactive");
+      setButtonUpClass("thumbs-up-active");
+    } else if (buttonUpClass === "inactive") {
+      setButtonUpClass("thumbs-up-active");
     } else if (buttonUpClass === "thumbs-up-active") {
       setButtonUpClass("inactive");
     }
   }
+
   function handleClickDown() {
-    if (buttonDownClass === "inactive") {
-      setButtonDownClass("thumbs-down-active");
-    } else if (buttonUpClass === "thumbs-up-active") {
+    if (buttonUpClass === "thumbs-up-active") {
       setButtonUpClass("inactive");
+      setButtonDownClass("thumbs-down-active");
+    } else if (buttonDownClass === "inactive") {
+      setButtonDownClass("thumbs-down-active");
     } else if (buttonDownClass === "thumbs-down-active") {
       setButtonDownClass("inactive");
     }

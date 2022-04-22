@@ -22,7 +22,11 @@
 .add-button{
     border-radius: 30px;
 }
+.name-post{
+    display: inline-flex;
+}
 .add-form-name{
+    flex-wrap: wrap;
     width:500px;
 }
 .add-form-message{
