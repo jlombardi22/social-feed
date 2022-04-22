@@ -1,0 +1,44 @@
+.app-container{
+    background-color: lightcyan;
+}
+.form-card{
+    flex-wrap: wrap;
+    width: 90%;
+}
+.message-card{
+    flex-wrap: wrap;
+    width: 90%;
+}
+.add-button{
+    border-radius: 30px;
+}
+.add-form-name{
+    width:70%;
+}
+.add-form-message{
+    width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    height: 4rem
+}
+.button-space{
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: 2rem;
+    align-items: flex-end;
+}
+.post{
+   position: relative;
+   flex-wrap: wrap;
+
+}
+.thumbs{
+    position: relative;
+    text-align: end;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+

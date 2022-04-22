@@ -1,21 +1,25 @@
-import { Card, CardBody, CardSubtitle, CardText, CardTitle } from "reactstrap";
+import { Card, CardSubtitle, CardText, CardTitle } from "reactstrap";
+import ThumbButton from "./ThumbButton";
 
 const MessageCard = props => {
   return (
-    <Card>
-      <CardBody>
-        <CardText>
-          {props.postMade.map((message, i) => {
-            return (
-              <CardTitle key={i}>
-                <CardSubtitle>{message.name}</CardSubtitle>
-                <CardSubtitle>{message.message}</CardSubtitle>
-              </CardTitle>
-            );
-          })}
-        </CardText>
-      </CardBody>
-    </Card>
+    <div className="container-fluid message-card">
+      {props.postMade.map((message, i) => {
+        return (
+          <Card key={i} className="user-card">
+            <CardTitle>
+              {message.name}
+              <CardSubtitle>
+                {message.message}
+                <CardText className="thumbs">
+                  <ThumbButton />
+                </CardText>
+              </CardSubtitle>
+            </CardTitle>
+          </Card>
+        );
+      })}
+    </div>
   );
 };
 

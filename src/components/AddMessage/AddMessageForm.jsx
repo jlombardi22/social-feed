@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, Label, Input, Button, Form } from "reactstrap";
+import { FormGroup, Label, Input, Button, Form, Card, Col } from "reactstrap";
 
 const AddMessageForm = props => {
   const [name, setName] = useState("");
@@ -12,34 +12,45 @@ const AddMessageForm = props => {
       message: message,
     };
     console.log(newMessage);
+    props.addNewMessage(newMessage);
   }
 
   return (
-    <Form inline>
-      <FormGroup onSubmit={handleSubmit}>
-        <Label for="fullName">Name</Label>
-        <Input
-          id="exampleAddress"
-          name="text"
-          placeholder="ex... Joe"
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="message">Message</Label>
-        <Input
-          id="exampleText"
-          name="text"
-          type="textarea"
-          value={message}
-          onChange={e => setMessage(e.target.value)}
-        />
-      </FormGroup>
-      <Button color="success" type="submit">
-        Add
-      </Button>
-    </Form>
+    <Card className="form-card container-fluid">
+      <Form onSubmit={handleSubmit}>
+        <FormGroup row>
+          <Label for="fullName" sm={2}>
+            Name
+          </Label>
+          <Col sm={10}>
+            <Input
+              className="add-form-name"
+              name="text"
+              placeholder="Name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label className="post" for="message" sm={2}>
+            Post
+          </Label>
+          <Col className="button-space" sm={10}>
+            <Input
+              className="add-form-message"
+              name="text"
+              placeholder="Message"
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+            />
+            <Button className="add-button" color="primary">
+              Create
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
+    </Card>
   );
 };
 

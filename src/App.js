@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Messages from "./components/AddMessage/AddMessageForm";
 import MessageCard from "./components/DisplayMessage/MessageCard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 function App() {
   const [messages, setMessages] = useState([{ name: "Johnny", message: "Hi" }]);
@@ -10,7 +12,7 @@ function App() {
     setMessages(composeMessage);
   }
   return (
-    <div>
+    <div className="app-container">
       <Messages addNewMessage={addNewMessage} />
       <MessageCard postMade={messages} />
     </div>
