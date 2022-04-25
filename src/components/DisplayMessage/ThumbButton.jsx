@@ -12,7 +12,7 @@ const ThumbButton = props => {
       setButtonUpClass("thumbs-up-active");
     } else if (buttonUpClass === "inactive") {
       setButtonUpClass("thumbs-up-active");
-    } else if (buttonUpClass === "thumbs-up-active") {
+    } else {
       setButtonUpClass("inactive");
     }
   }
@@ -23,7 +23,7 @@ const ThumbButton = props => {
       setButtonDownClass("thumbs-down-active");
     } else if (buttonDownClass === "inactive") {
       setButtonDownClass("thumbs-down-active");
-    } else if (buttonDownClass === "thumbs-down-active") {
+    } else {
       setButtonDownClass("inactive");
     }
   }

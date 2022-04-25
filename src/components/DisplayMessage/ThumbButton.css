@@ -1,9 +1,15 @@
 .thumbs-up-active{
+    border: none;
+    background-color: white;
     color: green;
 }
 .thumbs-down-active{
+    border: none;
+    background-color: white;
     color: red;
 }
 .inactive{
+    border:none;
     color: grey;
+    background-color: white;
 }

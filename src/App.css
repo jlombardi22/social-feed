@@ -3,27 +3,25 @@
 }
 .form-card{
     flex-wrap: wrap;
-    width: 80%;
+    width: 40%;
     padding-bottom: 20px;
-    display: flexbox;
     position: relative;
 
 }
 .message-card{
     flex-wrap: wrap;
     position: relative;
-    width: 80%;
+    width: 40%;
     padding-bottom: 20px;
     padding-top: 5px;
 }
-.new-form{
-    height: fit-content;
-}
+
 .add-button{
     border-radius: 30px;
 }
 .name-post{
     display: inline-flex;
+    
 }
 .add-form-name{
     flex-wrap: wrap;
@@ -42,13 +40,12 @@
 .post{
    position: relative;
    flex-wrap: wrap;
-
 }
 .thumbs{
     text-align: end;
     padding-left: 5px;
     padding-right: 5px;
-
+    
 }
 .nav{
     background-color: lightseagreen;
